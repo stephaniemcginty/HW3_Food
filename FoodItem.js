@@ -1,7 +1,7 @@
 // constructor for food items
 var FoodItem = function (name, calories, quantity) {
     this.name = name;
-    this.calories = calories
+    this.calories = calories;
     this.quantity = quantity;
 };
 

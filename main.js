@@ -30,12 +30,18 @@ let foodItems = [];
 // function to update screen output
 let displayFoodItems = function () {
     let displayString = "";
+    let totalCalories = 0;
 
     for (let i in foodItems) {                            
         displayString += foodItems[i].toString() + "\n";  
-        // cumulativeCalories += foodItems[i].calculateCalories(); 
+        totalCalories += foodItems[i].calories * foodItems[i].quantity;
+        // console.log(cumulativeCalories); 
     }
-    let cumulativeCalories = foodItems.calories * foodItems.quantity;  
+
+    let cumulativeCalories = totalCalories;
+    
+// console.log(foodItems)
+   
     displayString += "\n You have consumed " + cumulativeCalories + " calories";
     
   
